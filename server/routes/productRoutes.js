@@ -6,6 +6,7 @@
  * @author      :: Joshim Uddin
  */
 const router = require('express').Router();
+const mongoose = require('mongoose')
 
 // Load Essential Model
 const { Product } = require('../models/product');

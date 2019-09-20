@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const mongoose = require('mongoose')
 const async = require('async');
 const moment = require("moment");
 const fs = require('fs');
@@ -15,6 +16,10 @@ cloudinary.config({
     api_key: process.env.CLOUD_API_KEY,
     api_secret: process.env.CLOUD_API_SECRET
 });
+
+// Load Essential Model
+const { User } = require("../models/user");
+const { Payment } = require('../models/payment');
 
 
 // Middlewares

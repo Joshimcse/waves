@@ -10,6 +10,13 @@
 const { User } = require("../models/user");
 const { Payment } = require('../models/payment');
 
+// Middlewares
+const { auth } = require('../middleware/auth');
+const { admin } = require('../middleware/admin');
+
+// Utils
+const { sendEmail } = require('../utils/mail/index');
+
 /**
  * @controller registerController
  * @desc register a users to the database...
